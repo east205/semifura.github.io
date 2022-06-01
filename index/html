@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>西武2000 3色LED表示器再現</title>
+</head>
+<body>
+    <p align="center">
+        <h1 align="center">西武2000 3色LED表示器再現</h1>
+        <p class="表示部" align="center">
+            <img src="無表示.png" alt="default" id="種別"><!--
+            --><img src="無表示2.png" alt="default" id="行先">
+        </p>
+        <p class="種別操作部" align="center">
+            〈種別〉
+            <button type="button" onclick="Local()">各停</button>
+            <button type="button" onclick="Semi()">準急</button>
+            <button type="button" onclick="Exp()">急行</button>
+            <button type="button" onclick="RapidExp()">快急</button>
+        </p>
+        <p class="行先操作部" align="center">
+            〈行先〉
+            <button type="button" onclick="SeibuShin()">西武新宿</button>
+            <button type="button" onclick="Kamishaku()">上石神井</button>
+            <button type="button" onclick="Honkawa()">本川越</button>
+            <button type="button" onclick="Haijima()">拝島</button>
+            <button type="button" onclick="Kokubun()">国分寺</button>
+        </p>
+    </p>
+    <p align="center">
+        <iframe src="history.html" width="500px" height="100px">aaa</iframe>
+    </p>
+    <p align="center">
+        情報提供頂ける方はTwitterのDMまで→@twotteckter<br>
+        (c)2022 Miyagino All rights reserved. 
+    </p>
+</body>
+<script>
+    function Local(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "各停.png";
+    }
+    function Semi(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "準急.png";
+    }
+    function Exp(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "急行.png";
+    }
+    function RapidExp(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "快急.png";
+    }
+    function SeibuShin(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "西武新宿.png";
+    }
+    function Kamishaku(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "上石神井.png";
+    }
+    function Haijima(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "拝島.png";
+    }
+    function Kokubun(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "国分寺.png";
+    }
+    function Honkawa(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "本川越.png";
+    }
+</script>
