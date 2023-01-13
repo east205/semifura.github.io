@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>西武2000 フルカラーLED表示器再現</title>
+</head>
+<body>
+    <p align="center">
+        <h1 align="center">西武2000 フルカラーLED表示器再現</h1>
+        <p class="表示部" align="center">
+            <img src="FC\undefined.png" alt="default" id="種別"><!--
+            --><img src="FC\undefined2.png" alt="default" id="行先">
+        </p>
+        <p class="種別操作部" align="center">
+            〈種別〉
+            <button type="button" onclick="Local()">各停</button>
+            <button type="button" onclick="Semi()">準急</button>
+            <!--<button type="button" onclick="Exp()">急行</button>-->
+            <button type="button" onclick="Rapid()">快速</button>
+            <button type="button" onclick="None()">無表示</button>
+        </p>
+        <p class="行先操作部" align="center">
+            〈行先〉
+            <button type="button" onclick="Tanashi()">田無</button>
+            <button type="button" onclick="Seibuen()">西武園</button>
+            <button type="button" onclick="Honkawa()">本川越</button>
+            <button type="button" onclick="Ikebukuro()">池袋</button>
+            <button type="button" onclick="Toshimaen()">豊島園</button>
+            <button type="button" onclick="Chichibu()">西武秩父</button>
+            <button type="button" onclick="Nishitoko()">西所沢</button>
+            <button type="button" onclick="Dome()">西武球場前</button>
+            <button type="button" onclick="None2()">無表示</button>
+        </p>
+    </p>
+    <p align="center">
+        <iframe src="history2.html" width="500px" height="100px">aaa</iframe>
+    </p>
+    <p align="center">
+        <a href="index.html">INDEX</a>
+    </p>
+    <p align="center">
+        問題点・バグなどの諸連絡はTwitterまで→@SEMI_Fullerene<br>
+        (c)2022 せみふら All rights reserved. 
+    </p>
+</body>
+<script>
+    function Local(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "FC/各停.png";
+    }
+    function Semi(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "FC/準急.png";
+    }
+    function Exp(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "3C/急行.png";
+    }
+    function Rapid(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "FC/快速.png";
+    }
+    function None(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "FC/undefined.png";
+    }
+    function Tanashi(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/田無.png";
+    }
+    function Seibuen(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/西武園.png";
+    }
+    function Ikebukuro(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/池袋.png";
+    }
+    function Toshimaen(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/豊島園.png";
+    }
+    function Honkawa(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/本川越.png";
+    }
+    function Chichibu(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/西武秩父.png";
+    }
+    function Nishitoko(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/西所沢.png";
+    }
+    function Dome(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/西武球場前.png";
+    }
+    function None2(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "FC/undefined2.png";
+    }
+</script>

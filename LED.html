@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>西武2000 3色LED表示器再現</title>
+</head>
+<body>
+    <p align="center">
+        <h1 align="center">西武2000 3色LED表示器再現</h1>
+        <p class="表示部" align="center">
+            <img src="無表示.png" alt="default" id="種別"><!--
+            --><img src="無表示2.png" alt="default" id="行先">
+        </p>
+        <p class="種別操作部" align="center">
+            〈種別〉
+            <button type="button" onclick="Local()">各停</button>
+            <button type="button" onclick="Semi()">準急</button>
+            <button type="button" onclick="Exp()">急行</button>
+            <button type="button" onclick="RapidExp()">快速急行</button>
+        </p>
+        <p class="行先操作部" align="center">
+            〈行先〉
+            <button type="button" onclick="SeibuShin()">西武新宿</button>
+            <button type="button" onclick="Kamishaku()">上石神井</button>
+            <button type="button" onclick="Honkawa()">本川越</button>
+            <button type="button" onclick="Haijima()">拝島</button>
+            <button type="button" onclick="Kokubun()">国分寺</button>
+            <button type="button" onclick="Shintoko()">新所沢</button>
+            <button type="button" onclick="Nishitoko()">西所沢</button>
+        </p>
+    </p>
+    <p align="center">
+        <iframe src="history.html" width="500px" height="100px">aaa</iframe>
+    </p>
+    <p align="center">
+        <a href="index.html">INDEX</a>
+    </p>
+    <p align="center">
+        問題点・バグなどの諸連絡はTwitterまで→@SEMI_Fullerene<br>
+        (c)2022 せみふら All rights reserved. 
+    </p>
+</body>
+<script>
+    function Local(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "3C/各停.png";
+    }
+    function Semi(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "3C/準急.png";
+    }
+    function Exp(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "3C/急行.png";
+    }
+    function RapidExp(){
+        let 種別 = document.querySelector('#種別');
+        種別.src = "3C/快急.png";
+    }
+    function SeibuShin(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "3C/西武新宿.png";
+    }
+    function Kamishaku(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "3C/上石神井.png";
+    }
+    function Haijima(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "3C/拝島.png";
+    }
+    function Kokubun(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "3C/国分寺.png";
+    }
+    function Honkawa(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "3C/本川越.png";
+    }
+    function Shintoko(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "3C/新所沢.png";
+    }
+    function Nishitoko(){
+        let 行先 = document.querySelector('#行先');
+        行先.src = "3C/西所沢.png";
+    }
+</script>
