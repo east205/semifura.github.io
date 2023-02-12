@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>西武2000系列を判別するくん(仮称)</title>
+    <script type="text/javascript" src="2000miwake.js"></script>
+</head>
+<body>
+    <h1 align="center">
+        西武2000系列を判別するくん(仮称)
+    </h1>
+    <div align="center">
+        <h2>概要</h2>
+        西武2000系列の各編成を大まかに判別することができるページです。<br>
+        ※判別には最新の情報を使用しています。すでに除籍された車両の場合、廃車された時点での形態を反映しています。<br>
+        ※2017F及び2415Fについては早期廃車のため、2069Fは車体色で判別できるため対象外とさせていただきます。<br>
+        <span style="color: #ff0000; font-weight: bold;">※必ずJavascriptを有効にしてください！判別処理にJavascriptを使用しています。</span>
+        <h2>質問</h2>
+        <div class="question1">
+            Q1.判別したい編成の両数を選択してください。〈新旧共通〉<br>
+            <form id="question1">
+                <label><input type="radio" name="Q1" value="2Car">2両</label>
+                <label><input type="radio" name="Q1" value="4Car">4両※新2000系のみ</label>
+                <label><input type="radio" name="Q1" value="6Car">6両</label>
+                <label><input type="radio" name="Q1" value="8Car">8両</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question2">
+            Q2.前面形状を選択してください。〈新旧共通〉<br>
+            <img src="2000/2007.jpg" Alt="2007" width="250">
+            <img src="2000/2057.jpg" Alt="2057" width="250"><br>
+            (左 : 旧2000系)(右 : 新2000系)<br>
+            <form id="question2">
+                <label><input type="radio" name="Q2" value="2000">旧2000系</label>
+                <label><input type="radio" name="Q2" value="N2000">新2000系</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question3">
+            Q3.リニューアルの有無を選択してください。〈新旧共通〉<br>
+            <img src="2000/2027.jpg" Alt="2027" width="250">
+            <img src="2000/2081.jpg" Alt="2081" width="250"><br>
+            (左 : リニューアル未施工)(右 : リニューアル施工)<br>
+            <form id="question3">
+                <label><input type="radio" name="Q3" value="false">リニューアル未施工</label>
+                <label><input type="radio" name="Q3" value="true">リニューアル施工</label>
+            </form>
+            <details>
+                <summary>判別方法</summary>
+                <b>①車番で判別する</b><br>
+                未施工車は切り抜き文字ですが施工車ではプレート式に変更されています。<br>
+                <b>②前面車番の有無で判別する(新2000系限定)</b><br>
+                新2000系の施工車では9000系同様の車番プレートが前面にも設置されています。<br>
+                <b>③戸袋窓の有無で判別する(新2000系限定)</b><br>
+                新2000系の施工車では戸袋窓が封鎖されています。※旧2000系は当初より戸袋窓がありません
+            </details>
+        </div>
+        <hr>
+        <div class="question4">
+            Q4.行先表示器の種類を選択してください。〈新旧共通〉<br>
+            <img src="2000/RS.jpg" Alt="LS" width="250">
+            <img src="2000/3C.jpg" Alt="3C" width="250">
+            <img src="2000/FC.jpg" Alt="FC" width="250"><br>
+            (左 : 幕式)(中 : 3色LED式)(右 : フルカラーLED式)<br>
+            <form id="question4">
+                <label><input type="radio" name="Q4" value="RS">幕式</label>
+                <label><input type="radio" name="Q4" value="3C">3色LED式</label>
+                <label><input type="radio" name="Q4" value="FC">フルカラーLED式</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question5">
+            Q5.製造時期について選択してください。〈新2000系のみ〉<br>
+            <img src="2000/2525.jpg" Alt="2525" width="250">
+            <img src="2000/2061.jpg" Alt="2061" width="250">
+            <img src="2000/2085.jpg" Alt="2085" width="250"><br>
+            (左 : 初期)(中 : 中期)(右 : 後期)<br>
+            <form id="question5">
+                <label><input type="radio" name="Q5" value="1st">初期</label>
+                <label><input type="radio" name="Q5" value="2nd">中期</label>
+                <label><input type="radio" name="Q5" value="3rd">後期</label>
+                <label><input type="radio" name="Q5" value="none">旧2000系の場合はこちら</label>
+            </form>
+            <details>
+                <summary>判別方法</summary>
+                <b>①客用扉窓の形状で判別する</b><br>
+                <img src="2000/door1st3rd.jpg" alt="door1st3rd" width="250">
+                <img src="2000/door2nd.jpg" alt="door2nd" width="250"><br>
+                前･後期車では四隅が丸い形状であるのに対し、中期車ではドア窓が角張った形状に変更されています。<br>
+                <b>②密着連結器の形状で判別する</b><br>
+                <img src="2000/CSD-82.jpg" alt="82" height="250">
+                <img src="2000/CSD-90.jpg" alt="90" height="250"><br>
+                前期車では幅広タイプのCSD-82を搭載していますが、中期車及び後期車では狭小タイプのCSD-90を搭載しています。<br>
+                <b>③戸袋窓の大きさで判別する</b><br>
+                <a href="2000/1st.jpg"><img src="2000/1st.jpg" alt="1st" height="250"></a>
+                <a href="2000/2nd.jpg"><img src="2000/2nd.jpg" alt="2nd" height="250"></a>
+                <a href="2000/3rd.jpg"><img src="2000/3rd.jpg" alt="3rd" height="250"></a><br>
+                ※画像をクリックすると拡大画像を表示します。<br>
+                前期車では天地寸法が小さい形状であるのに対し、中期車以降では天地寸法がやや拡大された形状へ変更されています。<br>
+                <b>※判別できない場合に役立ちそうな豆知識</b><br>
+                ◯2021年12月以降、池袋線では後期車のみ活躍しています。（但し、狭山線4連の代走は必ず初期車が割り当てられます）<br>
+                ◯4連の後期車は存在しません。<br>
+                ◯後期車かつ幕車の組み合わせは池袋線所属の2連のみで、それ以外の幕車は全編成初期車もしくは中期車です。
+            </details>
+        </div>
+        <hr>
+        <div class="question6">
+            Q6.前面貫通扉の大きさを選択してください。〈新2000系のみ〉<br>
+            <img src="2000/2509.jpg" Alt="2509" width="250">
+            <img src="2000/2067.jpg" Alt="2067" width="250"><br>
+            (左 : 小窓)(右 : 大窓)<br>
+            <form id="question6">
+                <label><input type="radio" name="Q6" value="Small">小窓</label>
+                <label><input type="radio" name="Q6" value="Big">大窓</label>
+                <label><input type="radio" name="Q6" value="none">旧2000系の場合はこちら</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question7">
+            Q7.パンタグラフの種類を選択してください。〈新2000系のみ〉<br>
+            <img src="2000/PT4320.jpg" Alt="4320" width="250">
+            <img src="2000/PT7116.jpg" Alt="7116" width="250"><br>
+            (左 : 菱形)(右 : シングルアーム)<br>
+            <form id="question7">
+                <label><input type="radio" name="Q7" value="4320">菱形(PT4320)</label>
+                <label><input type="radio" name="Q7" value="7116">シングルアーム(PT7116)</label>
+                <label><input type="radio" name="Q7" value="none">旧2000系の場合はこちら</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question8">
+            Q8.新宿･飯能方先頭車のランボードの状態を選択してください。〈4両編成のみ〉<br>
+            <a href="2000/runboad3.jpg"><img src="2000/runboad3.jpg" Alt="3" height="75"></a>
+            <a href="2000/runboad2.jpg"><img src="2000/runboad2.jpg" Alt="2" height="75"></a>
+            <a href="2000/runboad1.jpg"><img src="2000/runboad1.jpg" Alt="1" height="75"></a><br>
+            ※画像をクリックすると拡大画像を表示します。<br>
+            (左 : 未撤去)(中 : 半撤去･未撤去混在)(右 : 全撤去)<br>
+            <form id="question8">
+                <label><input type="radio" name="Q8" value="1">未撤去</label>
+                <label><input type="radio" name="Q8" value="2">半撤去･未撤去混在</label>
+                <label><input type="radio" name="Q8" value="3">全撤去</label>
+                <label><input type="radio" name="Q8" value="none">4両ではない場合はこちら</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question9">
+            Q9.前面窓下のウォッシャーの状態を選択してください。〈新2000系のみ〉<br>
+            <a href="2000/washer1.jpg"><img src="2000/washer1.jpg" Alt="1" height="45"></a>
+            <a href="2000/washer2.jpg"><img src="2000/washer2.jpg" Alt="2" height="45"></a>
+            <a href="2000/washer3.jpg"><img src="2000/washer3.jpg" Alt="3" height="45"></a>
+            <a href="2000/washer4.jpg"><img src="2000/washer4.jpg" Alt="4" height="45"></a><br>
+            ※画像をクリックすると拡大画像を表示します。<br>
+            左から(1枚目 : 未設置)(2枚目 内側設置)(3枚目 : 外側設置)(4枚目 : 右片方のみ設置)<br>
+            <form id="question9">
+                <label><input type="radio" name="Q9" value="1">未設置</label>
+                <label><input type="radio" name="Q9" value="2">内側設置</label>
+                <label><input type="radio" name="Q9" value="3">外側設置</label>
+                <label><input type="radio" name="Q9" value="4">右片方のみ設置</label>
+                <label><input type="radio" name="Q9" value="none">新2000系ではない場合はこちら</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question10">
+            Q10.前面ワイパーの状態を選択してください。〈旧2000系のみ〉<br>
+            <a href="2000/wiper1.jpg"><img src="2000/wiper1.jpg" Alt="1" height="175"></a>
+            <a href="2000/wiper2.jpg"><img src="2000/wiper2.jpg" Alt="2" height="175"></a>
+            <a href="2000/wiper3.jpg"><img src="2000/wiper3.jpg" Alt="3" height="175"></a>
+            <a href="2000/wiper4.jpg"><img src="2000/wiper4.jpg" Alt="4" height="175"></a><br>
+            ※画像をクリックすると拡大画像を表示します。<br>
+            左から(1枚目 : 助手席側未設置･貫通扉ワイパーのアームが2本、タイプ1)<br>
+            (2枚目 : 助手席側設置･貫通扉ワイパーのアームが1本、タイプ2)<br>
+            (3枚目 : 助手席側設置･貫通扉ワイパーのアームが2本且つ銀色、タイプ3)<br>
+            (3枚目 : 助手席側設置･貫通扉ワイパーのアームが2本且つ黒色、タイプ4)<br>
+            <form id="question10">
+                <label><input type="radio" name="Q10" value="1">タイプ1</label>
+                <label><input type="radio" name="Q10" value="2">タイプ2</label>
+                <label><input type="radio" name="Q10" value="3">タイプ3</label>
+                <label><input type="radio" name="Q10" value="4">タイプ4</label>
+                <label><input type="radio" name="Q10" value="none">旧2000系ではない場合はこちら</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question11">
+            Q11.前面右上の方向幕の状態を選択してください。〈旧2000系のみ〉<br>
+            <a href="2000/rollsign_black.jpg"><img src="2000/rollsign_black.jpg" Alt="1" height="75"></a>
+            <a href="2000/rollsign_white.jpg"><img src="2000/rollsign_white.jpg" Alt="2" height="75"></a><br>
+            ※画像をクリックすると拡大画像を表示します。<br>
+            (1枚目 : 黒幕)(2枚目 : 白幕)<br>
+            <form id="question11">
+                <label><input type="radio" name="Q11" value="1">黒幕</label>
+                <label><input type="radio" name="Q11" value="2">白幕</label>
+                <label><input type="radio" name="Q11" value="none">旧2000系ではない場合はこちら</label>
+            </form>
+        </div>
+        <hr>
+        <div class="question12">
+            Q12.西武新宿･飯能方先頭車の客用扉窓の支持方式を選択してください。〈旧2000系のみ〉<br>
+            <a href="2000/door_stainless.jpg"><img src="2000/door_stainless.jpg" Alt="1" height="250"></a>
+            <a href="2000/door_alumi.jpg"><img src="2000/door_alumi.jpg" Alt="2" height="250"></a><br>
+            ※画像をクリックすると拡大画像を表示します。<br>
+            (1枚目 : ステンレス枠支持)(2枚目 : アルミ枠支持)<br>
+            <form id="question12">
+                <label><input type="radio" name="Q12" value="1">ステンレス枠支持</label>
+                <label><input type="radio" name="Q12" value="2">アルミ枠支持</label>
+                <label><input type="radio" name="Q12" value="3">ステンレス･アルミ枠混在</label>
+                <label><input type="radio" name="Q12" value="none">旧2000系ではない場合はこちら</label>
+            </form>
+        </div>
+        <hr>
+        <h2>判別実行</h2>
+        <input type="button" name="execution" value="実行" onclick="check()">
+        <hr>
+        <h2>実行結果</h2>
+        形式:<span id="resultseries" style="font-size: large;">実行ボタンを押してください。</span><br>
+        編成:<span id="resultformation" style="font-size: x-large;">実行ボタンを押してください。</span>
+        <div id="result">
+            未回答の項目がある場合、ここに表示されます。
+        </div>
+    </div>
+    <p align="center">
+        <a href="index.html">INDEX</a>
+    </p>
+    <p align="center">
+        情報提供頂ける方はTwitterのDMまで→@twotteckter<br>
+        (c)2022 せみふら All rights reserved. 
+    </p>
+</body>
